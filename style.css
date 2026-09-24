@@ -107,6 +107,11 @@ body {
     src: url(assets/fonts/Melted-Monster.ttf);
 }
 
+@font-face {
+    font-family: blood-crow;
+    src: url(assets/fonts/bloodcrow.ttf);
+}
+
 .splash-container h3 {
     color: rgb(218, 98, 98);
     font-family: blood-zombie;
@@ -146,7 +151,7 @@ body {
 .intro-text h2{
     padding: 10px;
         font-family: melted-moster;
-        color: #b52d2d;
+        color: #e10909;
 }
  @keyframes fadein{
     from{
@@ -166,4 +171,42 @@ body {
     border: none;
     cursor: pointer;
 
+}
+
+.yesNote{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 400px;
+    background: url("assets/grunge-paper-background.jpg");
+     background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: yesNote 2s ease forwards;
+            box-shadow: 3px 4px 3px black;
+}
+.yesNote h2{
+    padding: 30px;
+    text-align: center;
+    font-family: blood-crow;
+}
+@keyframes yesNote {
+      0%{
+     height: 100px;
+      }
+      25%{
+        height: 200px;
+      }
+      75%{
+        height: 300px;
+      }
+      100%{
+        height: 300px;
+      }
 }
