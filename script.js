@@ -6,10 +6,10 @@ const nunVoice = new Audio('/assets/sounds/nun-voice.mp3');
 const iseeyou = new Audio('/assets/sounds/iseeyou.mp3');
 const scarylaugh = new Audio('/assets/sounds/ScaryLaughSoundEffect.mp3');
 const evilscaryLaugh = new Audio('/assets/sounds/Scary-Sound-Effect3.mp3');
+const monsterRoar = new Audio('/assets/sounds/Monster-Roar.mp3'); 
+const suspense = new Audio('assets/sounds/Suspense-rise.mp3');
+const happy = new Audio('assets/sounds/happy.mp3');
  
-  document.querySelector('body').addEventListener('click', function(){
-    horrorScream.play();
-  });
 
 document.getElementById("splash-hide").addEventListener('click', function(){
     document.querySelector('.splash-container').style.display = "none";
@@ -62,4 +62,43 @@ document.getElementById("btn3").addEventListener('click' , function(){
 
     document.querySelector('#txt3').style.display = "block";
 
-})
+});
+
+document.getElementById("scaredYes").addEventListener('click', function(){
+    document.querySelector('.hmmOk').style.display = "none";
+    document.querySelector('.hmmOk h2').textContent = "don't worry , I will not do any thing I just need your body , eehahahahaha";
+     document.querySelector('.hmmOk').style.display = "flex";
+});
+
+document.getElementById("scaredNo").addEventListener('click', function(){
+    monsterRoar.play();
+    document.querySelector('.scaredNoNote').style.display = "flex";
+        document.querySelector('#txt3').style.display = "none";
+    document.querySelector('#scaredNoTxt').style.display = "block";
+});
+
+
+
+document.getElementById("scaredYes").addEventListener('click' , function(){
+     document.querySelector('#txt3').style.display = "none";
+  document.querySelector('#scaredYesTxt').style.display = "block";
+});
+
+document.querySelector('.help').addEventListener('click' , function(){
+ suspense.play();
+  document.querySelector('#introVideo').pause();
+happy.play();
+ document.querySelector('.ending-screen').style.display = "flex";
+});
+document.querySelector('.help1').addEventListener('click' , function(){
+ suspense.play();
+  document.querySelector('#introVideo').pause();
+happy.play();
+ document.querySelector('.ending-screen').style.display = "flex";
+});
+document.querySelector('.help2').addEventListener('click' , function(){
+ suspense.play();
+  document.querySelector('#introVideo').pause();
+happy.play();
+ document.querySelector('.ending-screen').style.display = "flex";
+});

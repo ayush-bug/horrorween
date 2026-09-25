@@ -111,6 +111,15 @@ body {
     font-family: blood-crow;
     src: url(assets/fonts/bloodcrow.ttf);
 }
+@font-face {
+    font-family: fear;
+    src: url(assets/fonts/Face-Your-Fears.ttf);
+}
+
+@font-face {
+    font-family: bates;
+    src: url(assets/fonts/Bates-Shower.ttf);
+}
 
 .splash-container h3 {
     color: rgb(218, 98, 98);
@@ -211,7 +220,7 @@ body {
       }
 }
 
-.hmmOk{
+.scaredNoNote,.hmmOk{
       position: fixed;
     top: 40%;
     left: 50%;
@@ -229,7 +238,7 @@ body {
             animation: hmmok 2s ease forwards;
             box-shadow: 3px 4px 3px black;
 }
-.hmmOk h2{
+.scaredNoNote ,.hmmOk h2{
      padding: 30px;
     text-align: center;
     font-family: blood-crow;
@@ -243,3 +252,53 @@ body {
     }
 }
 
+ .ending-screen h1,.ending-screen{
+    position: fixed;
+    width: 100%;
+    height: 99vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #130f0f;
+    animation: horror 5s alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .ending-screen h1{
+    font-family: fear;
+ }
+@keyframes horror {
+     0%, 18%, 22%, 25%, 45%, 53%, 57%,90% {
+        background-color: white;
+    opacity: 1;
+  }
+  21%,30% ,35%, 60%, 80%{
+    background-color: wheat;
+    opacity: 0.3;
+  }
+  20%, 24%, 55% {
+    background-color: beige;
+    opacity: 0.4; 
+  }
+  100%{
+    opacity: 1;
+    background-color: #130f0f;
+  }
+}
+.content h1{
+    letter-spacing: 5px;
+    font-family: bates;
+}
+.content{
+    color: white;
+    animation: showof 6s alternate;
+}
+@keyframes showof {
+    0%,90% ,90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
