@@ -24,7 +24,7 @@ and also if you really wanna enjoy visit in night heheheh.
 
 # Demo Link
 
-[live preview](https://horrorween.ct.ws/)
+[live preview](https://horrorween.vercel.app/)
 
 # languages used
 - HTML
